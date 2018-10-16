@@ -1,0 +1,73 @@
+<html>
+<script>
+    function myFunction() {
+        var list = document.getElementById('pictureList');
+        for (var i = list.children.length; i >= 0; i--) {
+            list.appendChild(list.children[Math.random() * i | 0]);
+        }
+    }
+
+</script>
+
+<style>
+    button {color: green;background-color: white;
+        border-radius: 5px;
+        height: 100px;
+    }
+    button:hover{
+        background-color: green;color:white;
+    }
+    body {
+        background-color: lightgrey;
+    }
+    h1 {
+        color: lightcoral;
+        text-align: center;
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+    }
+
+    li {
+        border: 20px solid lightblue;
+    }
+</style>
+
+<title>beautiful photos .com</title>
+
+<head>
+    <link rel="icon" href=".\assets\castle-on-a-lake.jpeg">
+</head>
+
+<body>
+    <h1>Welcome to beautiful photos .com</h1>
+    <button type="button" onclick="myFunction()">click here to shuffle photos</button>
+    <l id="pictureList">
+        <li>
+            <img src=".\assets\castle-on-a-lake.jpeg">
+            <span>a castle and a reflection pool</span>
+        </li>
+
+        <li>
+            <img src=".\assets\sea-side-huts.jpeg">
+            <span>3 tropical huts</span>
+        </li>
+
+        <li>
+            <img src=".\assets\building-on-a-lake.jpg">
+            <span>a castle behind a reflection pool with some trees</span>
+        </li>
+
+        <li>
+            <img src=".\assets\waterfall-on-a-cliff.jpeg">
+            <span>a waterfall on a cliff with some boats</span>
+        </li>
+
+
+    </l>
+
+</body>
+
+</html>
